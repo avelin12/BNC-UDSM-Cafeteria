@@ -1,0 +1,405 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFFFFF;
+    color: #000000;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header and Nav */
+header {
+    background-color: #FFFFFF;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-circle {
+    background-color: #FF8C00;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #FF8C00;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #808080;
+    font-weight: bold;
+}
+
+nav ul li a.active {
+    background-color: #FF8C00;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border-radius: 30px;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/8f/bc/ad/spice-route.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #FFFFFF;
+    text-align: left;
+    padding: 150px 20px;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+    position: relative;
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 40px;
+    font-weight: bold;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary {
+    background-color: #FF8C00;
+    color: #FFFFFF;
+}
+
+.btn-secondary {
+    background-color: #FFFFFF;
+    color: #000000;
+    border: 1px solid #FF8C00;
+}
+
+/* Why Choose Us Section */
+.why-choose {
+    background-color: #FFF5EE;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.why-choose h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.why-choose p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-10px) rotate(1deg);
+    box-shadow: 0 12px 24px rgba(255, 140, 0, 0.4);
+    animation: cardHover 0.5s ease-in-out;
+}
+
+@keyframes cardHover {
+    0% {
+        transform: translateY(0) rotate(0);
+    }
+
+    50% {
+        transform: translateY(-15px) rotate(2deg);
+    }
+
+    100% {
+        transform: translateY(-10px) rotate(1deg);
+    }
+}
+
+.card-icon {
+    font-size: 24px;
+    color: #FF8C00;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.card p {
+    font-size: 16px;
+}
+
+/* Popular Items Section */
+.popular-items {
+    background-color: #FFF5EE;
+    padding: 50px 20px;
+    text-align: left;
+}
+
+.popular-items h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.popular-items p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.popular-items .cards {
+    text-align: left;
+}
+
+.popular-items .card h3 {
+    font-size: 16px;
+    color: #808080;
+}
+
+.popular-items .card h4 {
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+.popular-items .card span {
+    color: #FF8C00;
+    font-weight: bold;
+}
+
+.view-menu {
+    text-align: right;
+    margin-top: -60px;
+    margin-bottom: 40px;
+}
+
+.view-menu .btn {
+    background-color: transparent;
+    border: 1px solid #FF8C00;
+    color: #FF8C00;
+    border-radius: 40px;
+}
+
+.cta-banner {
+    background-color: #FF8C00;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 50px 20px;
+    margin-top: 40px;
+    border-radius: 40px;
+}
+
+/* Footer */
+footer {
+    background-color: #4E342E;
+    color: #FFFFFF;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-logo {
+    margin-bottom: 10px;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-contact p,
+.footer-hours p {
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    header {
+        flex-wrap: wrap;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        padding: 100px 20px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #FFFFFF;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    nav ul li a {
+        padding: 10px;
+        display: block;
+    }
+
+    #nav-toggle:checked~nav {
+        display: block;
+    }
+
+    .hero {
+        padding: 80px 10px;
+        text-align: center;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .view-menu {
+        text-align: center;
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-text {
+        font-size: 16px;
+    }
+
+    .hamburger {
+        font-size: 24px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .why-choose h2,
+    .popular-items h2,
+    .cta-banner h2 {
+        font-size: 28px;
+    }
+}
